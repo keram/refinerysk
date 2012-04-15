@@ -1,5 +1,5 @@
 # encoding: utf-8
-# rails runner db/acunetix.rb
+# rails runner db/Refinerysk.rb
 
 module Refinery
   users = [
@@ -15,7 +15,7 @@ module Refinery
     end
   end
 
-  ids = Acunetix::Application::PAGES
+  ids = Refinerysk::Application::PAGES
   pages = {
     :home => {
 			:title => { :sk => 'Úvod' }
@@ -40,13 +40,17 @@ module Refinery
     unless page
       attributes = attributes.merge({:title => p[:title][::I18n.locale].to_s})
       page = Page.create(attributes)
+    end
 
+    unless page.parts.find_by_title('Body')
       page.parts.create({
           :title => 'Body',
           :body => "",
           :position => 0
         })
+    end
 
+    unless page.parts.find_by_title('Side Body')
       page.parts.create({
           :title => 'Side Body',
           :body => "",

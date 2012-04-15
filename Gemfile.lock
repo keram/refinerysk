@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: git://github.com/resolve/refinerycms-inquiries.git
-  revision: 665c6b01afebce76438f609d37e59d02947634fc
+  revision: 200878d81eead045092278bbee84aed63445d7cf
   branch: 2-0-stable
   specs:
-    refinerycms-inquiries (2.0.1)
+    refinerycms-inquiries (2.0.2)
       filters_spam (~> 0.2)
       refinerycms-core (~> 2.0.1)
       refinerycms-settings (~> 2.0.1)
