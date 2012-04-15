@@ -17,6 +17,15 @@ end
 
 module Refinerysk
   class Application < Rails::Application
+
+    PAGES = {
+      :HOME_PAGE_ID => 1,
+      :NOT_FOUND_PAGE_ID => 2,
+      :ABOUT_PAGE_ID => 3,
+      :CONTACT_PAGE_ID => 4,
+      :CONTACT_THANK_YOU_PAGE_ID => 5,
+      :CONTACT_PRIVACY_PAGE_ID => 6
+    }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -61,5 +70,9 @@ module Refinerysk
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :sendmail
+    config.action_mailer.perform_deliveries = true
   end
 end
