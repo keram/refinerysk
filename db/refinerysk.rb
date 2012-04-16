@@ -1,6 +1,8 @@
 # encoding: utf-8
 # rails runner db/Refinerysk.rb
 
+puts 'starting project devel seed'
+
 module Refinery
   users = [
     {:username => 'Marek Laboš', :email => 'keraml@gmail.com'}
@@ -28,6 +30,7 @@ module Refinery
     },
     :contact_thank_you => {
       :title => { :sk => 'Ďakujeme' },
+      :attributes => {:deletable => false, :show_in_menu => false}
     }
   }
 
@@ -84,3 +87,5 @@ module Refinery
 #  about_page.move_to_right_of(referencies_page)
 
 end
+
+puts 'seed finished succesfully'
