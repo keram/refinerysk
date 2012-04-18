@@ -8,8 +8,8 @@ $(function() {
 
     $("#presentation").slides({
         generateNextPrev: true,
-        pagination: false,
-        generatePagination: false
+        pagination: true,
+        generatePagination: true
     });
 
 });
