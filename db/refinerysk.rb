@@ -1,11 +1,11 @@
 # encoding: utf-8
-# rails runner db/Refinerysk.rb
+# rails runner db/refinerysk.rb
 
-puts 'starting project devel seed'
+puts 'starting project environment seed'
 
 module Refinery
   users = [
-    {:username => 'Marek Laboš', :email => 'keraml@gmail.com'}
+    {:username => 'admin', :email => 'info@refinery.sk'}
   ]
 
   users.each do |user|
@@ -18,18 +18,19 @@ module Refinery
   end
 
   ids = Refinerysk::Application::PAGES
+  
   pages = {
     :home => {
-			:title => { :sk => 'Úvod' }
+			:title => { :sk => 'Úvod', :en => 'Home' }
     },
     :about => {
-			:title => { :sk => 'O nás' }
+			:title => { :sk => 'O refinery.sk', :en => 'About refinery.sk' }
     },
     :contact => {
-      :title => { :sk => 'Kontakt' },
+      :title => { :sk => 'Kontakt', :en => 'Contact' },
     },
     :contact_thank_you => {
-      :title => { :sk => 'Ďakujeme' },
+      :title => { :sk => 'Ďakujeme', :en => 'Thank You' },
       :attributes => {:deletable => false, :show_in_menu => false}
     }
   }
