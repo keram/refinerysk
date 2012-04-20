@@ -1,7 +1,7 @@
-<%#= render_content_page(@page, {
+<%= render_content_page(@page, {
       :hide_sections => [:body_content_title],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
     }) %>
-<%= render :template => '../../db/templates/home_body_sk.html' -%>
+<%#= render :template => '../../db/templates/home_body_sk.html' -%>
 <%= render :partial => '/refinery/draft_page_message' unless @page.nil? or @page.live? -%>
 
