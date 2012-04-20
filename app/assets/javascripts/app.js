@@ -8,9 +8,9 @@ $(function() {
 
     $("#presentation").slides({
         generateNextPrev: true,
-        pagination: true,
-        generatePagination: true
+        pagination: false,
+        generatePagination: false
     });
-
+  
 });
 
