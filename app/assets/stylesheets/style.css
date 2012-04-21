@@ -75,9 +75,9 @@ td { vertical-align: top; }
    ========================================================================== */
 
 body {
-    font:normal 62.5%/1.5 Helvetica, Arial, sans-serif;
-    color: #999;
-    background: #efefef url(assets/design/background.png) repeat top center;
+    font: normal 62.5%/1.5 Helvetica, Arial, sans-serif;
+    color: #777;
+    background: #efefef url(design/background.png) repeat top center;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -149,7 +149,7 @@ h3 {
 #presentation {
     width: 100%;
     height: 100%;
-    background: #fafafa;
+    background: #fcfcfc;
     color: #333;
     font-size: 42px;
     position: relative;
