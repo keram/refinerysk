@@ -20,7 +20,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -43,12 +42,12 @@ gem 'refinerycms', '~> 2.0.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
-#  gem 'refinerycms-blog', '~> 2.0.0'
-#  gem 'refinerycms-inquiries', '~> 2.0.0'
+gem 'refinerycms-blog', '~> 2.0.0'
+#gem 'refinerycms-inquiries', '~> 2.0.0'
 # gem 'refinerycms-inquiries', :path => 'vendor/', :branch => '2-0-stable'
-gem 'refinerycms-inquiries', :git => 'git://github.com/resolve/refinerycms-inquiries.git', :branch => '2-0-stable'
+gem 'refinerycms-inquiries', '~> 2.0.0' #, :git => 'git://github.com/resolve/refinerycms-inquiries.git', :branch => '2-0-stable'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
-gem 'twitter', :git => 'git://github.com/jnunemaker/twitter.git'
-gem 'twitter-text'
+# gem 'twitter', :git => 'git://github.com/jnunemaker/twitter.git'
+# gem 'twitter-text'

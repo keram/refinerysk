@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= render '/refinery/head' %>
-  <body>
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
-      <header id="header">
+<%= render '/refinery/head' %>
+<body<%= %Q{ id="page-#{@page.id}"}.html_safe if @page.present? %>>
+  <div id="page_container">
+    <div id="header-wrapper">
+      <header id="header" class="clearfix">
         <%= render '/refinery/header' -%>
       </header>
-      <section id="page">
-        <%= yield %>
-      </section>
-      <footer>
-        <%= render '/refinery/footer' -%>
+    </div>
+    <div id="page-wrapper">
+      <div id="page-bg-holder">
+        <section id="page" class="clearfix" >
+          <%= yield %>
+        </section>
+      </div>
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer" >
+        <div class="inner clearfix">
+          <%= render '/refinery/footer' -%>
+        </div>
       </footer>
     </div>
-    <%= render '/refinery/javascripts' %>
-  </body>
+  </div>
+  <%= render '/refinery/javascripts' %>
+</body>
 </html>

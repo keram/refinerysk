@@ -1,0 +1,26 @@
+
+<% content_for :body do %>
+	<p class="perex">
+		Slovenský web a prevažne v slovenčine venovaný open source CMS systému RefineryCMS postavenom na ruby on rails.
+	</p>
+	<hr>
+	<h2>
+	<a href="/blog">Najnovší článok na blogu</a></h2>
+	<% blog_post = ::Refinery::Blog::Post.live.last %>
+	<% if blog_post.present? %>
+		<h3><%= link_to blog_post.title, refinery.blog_post_path(blog_post) %></h3>		
+	<% end %>
+	<hr>
+	<!--
+	<h2>
+		<a href="/galeria">Realizované projekty nad RefineryCMS na Slovensku v Čechách a okolí</a></h2>
+	<hr>
+-->
+	<h2>
+		<a href="/prezentacie-a-navody">Prezentácie a Návody</a></h2>
+	<hr>
+	<h2>
+		<a href="/contact">Kontakt</a></h2>
+
+<% end %>
+<%= render '/refinery/content_page', :hide_sections => [:body_content_title, :side_body] %>
