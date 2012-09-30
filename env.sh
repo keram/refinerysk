@@ -6,7 +6,7 @@ echo `RAILS_ENV=${1} rake db:drop`
 echo `RAILS_ENV=${1} rake db:create`
 echo `RAILS_ENV=${1} rake db:migrate`
 echo `RAILS_ENV=${1} rake db:seed`
-echo `RAILS_ENV=${1} rails r db/progressbar.rb`
+echo `RAILS_ENV=${1} rails r db/refinerysk.rb`
 
 echo "finish preparing ${1} db env"
 
