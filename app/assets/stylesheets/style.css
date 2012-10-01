@@ -254,6 +254,18 @@ form .field {
     display: none;
 }
 
+#blog_post .details {
+    display: none;
+}
+
+article {
+    max-width: 700px;
+}
+
+#blog_post img {
+    border: solid 3px #333;
+}
+
 /* =============================================================================
    Media Queries
    ========================================================================== */
